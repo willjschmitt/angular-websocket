@@ -257,11 +257,6 @@ function $WebSocketProvider($rootScope, $q, $timeout, $websocketBackend) {
     return this;
   };
 
-<<<<<<< HEAD
-      if ($websocketBackend.isMocked && $websocketBackend.isMocked() && $websocketBackend.isConnected(this.url)) {
-        $websocketBackend.mockSend();
-      }
-=======
   $WebSocket.prototype.send = function send(data) {
     var deferred = $q.defer();
     var self = this;
@@ -276,7 +271,6 @@ function $WebSocketProvider($rootScope, $q, $timeout, $websocketBackend) {
       });
       self.fireQueue();
     }
->>>>>>> master
 
     // Credit goes to @btford
     function cancelableify(promise) {
